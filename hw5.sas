@@ -112,6 +112,8 @@ run;
 
 *Create means statistics for graphs;
 ods pdf exclude all;
+ods listing exclude summary;
+ods output summary=hw5.means;
 proc means data = hw5.HW5XuProjectssorted p25 p75;
   class region date /missing;
   var jobtotal;
